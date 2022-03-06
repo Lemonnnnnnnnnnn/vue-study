@@ -22,6 +22,11 @@ export const routes = [
         path: '/SlotDemo',
         component: SlotDemo,
         name: 'Vue3-Slot用法'
+    },
+    {
+        path : '/ClassDemo',
+        component : ()=>import('./pages/ClassDemo.vue'),
+        name : 'Vue-class动态绑定'
     }
 ]
 
