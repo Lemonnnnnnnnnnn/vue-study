@@ -1,4 +1,3 @@
-import PropsDemo from './pages/propsDemo.vue'
 import SlotDemo from './pages/SlotDemo.vue'
 import { createRouter, createWebHashHistory } from 'vue-router'
 
@@ -15,8 +14,8 @@ export const routes = [
     },
     {
         path: '/PropsDemo',
-        component: PropsDemo,
-        name: 'Vue3-props用法'
+        component: ()=>import('./pages/PropsDemo/index.vue'),
+        name: 'Vue2和Vue3的props用法'
     },
     {
         path: '/SlotDemo',
@@ -27,7 +26,12 @@ export const routes = [
         path : '/ClassDemo',
         component : ()=>import('./pages/ClassDemo.vue'),
         name : 'Vue-class动态绑定'
-    }
+    },
+    {
+        path : '/EmitDemo',
+        component : ()=>import('./pages/EmitDemo/Father.vue'),
+        name : 'emit用法'
+    },
 ]
 
 const router = createRouter({
