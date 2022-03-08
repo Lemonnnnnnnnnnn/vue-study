@@ -32,6 +32,16 @@ export const routes = [
         component : ()=>import('./pages/EmitDemo/Father.vue'),
         name : 'emit用法'
     },
+    {
+        path : '/WatchDemo',
+        component : ()=>import('./pages/WatchDemo.vue'),
+        name : 'watch用法'
+    },
+    {
+        path : '/NextTickDemo',
+        component : ()=>import('./pages/NextTickDemo.vue'),
+        name : 'nextTick用法'
+    },
 ]
 
 const router = createRouter({
