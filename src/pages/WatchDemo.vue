@@ -26,7 +26,6 @@ watch([counter, my_text], (newVal, oldVal) => {
     if (newVal[0] === 5) {
         my_text.value = 'over!'
     }
-
 })
 
 watch(list, (newVal, oldVal) => {
