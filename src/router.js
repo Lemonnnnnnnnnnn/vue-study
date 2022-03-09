@@ -8,11 +8,6 @@ export const routes = [
         component: () => import('./App.vue'),
     },
     {
-        path: '/HelloWorld',
-        name: '你好，世界',
-        component: () => import('./pages/HelloWorld.vue'),
-    },
-    {
         path: '/PropsDemo',
         component: ()=>import('./pages/PropsDemo/index.vue'),
         name: 'Vue2和Vue3的props用法'
@@ -41,6 +36,11 @@ export const routes = [
         path : '/NextTickDemo',
         component : ()=>import('./pages/NextTickDemo.vue'),
         name : 'nextTick用法'
+    },
+    {
+        path : '/ScriptSetupDemo',
+        component : ()=>import('./pages/ScriptSetupDemo/index.vue'),
+        name : 'ScriptSetup用法'
     },
 ]
 

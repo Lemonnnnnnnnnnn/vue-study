@@ -7,7 +7,6 @@
 <script>
 import { onMounted, ref, toRefs } from 'vue'
 
-
 export default {
     props: { // 必须要注册后在setup中才能接收到
         title: {
