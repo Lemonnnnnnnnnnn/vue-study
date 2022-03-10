@@ -42,6 +42,11 @@ export const routes = [
         component : ()=>import('./pages/ScriptSetupDemo/index.vue'),
         name : 'ScriptSetup用法'
     },
+    {
+        path : '/ComponentDemo',
+        component : ()=>import('./pages/Component/index.vue'),
+        name : 'Component用法'
+    }
 ]
 
 const router = createRouter({
