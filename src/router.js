@@ -9,7 +9,7 @@ export const routes = [
     },
     {
         path: '/PropsDemo',
-        component: ()=>import('./pages/PropsDemo/index.vue'),
+        component: ()=>import('./pages/PropsDemo/Father.vue'),
         name: 'Vue2和Vue3的props用法'
     },
     {
@@ -38,14 +38,14 @@ export const routes = [
         name : 'nextTick用法'
     },
     {
-        path : '/ScriptSetupDemo',
-        component : ()=>import('./pages/ScriptSetupDemo/index.vue'),
-        name : 'ScriptSetup用法'
-    },
-    {
         path : '/ComponentDemo',
         component : ()=>import('./pages/Component/index.vue'),
         name : 'Component用法'
+    },
+    {
+        path : '/ReactiveRefDemo',
+        component :  ()=>import('./pages/ReactiveRefDemo/index.vue'),
+        name : 'ReactiveRef用法'
     }
 ]
 

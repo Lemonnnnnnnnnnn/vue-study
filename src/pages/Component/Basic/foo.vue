@@ -1,9 +1,6 @@
 <template>
-    <Bar />
-    <Foo />
-    <component :is="showBar ? Bar : Foo" />
+    <div>foo</div>
 </template>
 <script setup>
-const showBar = false
 
 </script>
