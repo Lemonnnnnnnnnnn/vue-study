@@ -1,8 +1,9 @@
 <script lang="ts" setup>
 import { routes } from './router'
-import {useRouter} from 'vue-router'
+import { useRouter } from 'vue-router'
 
 const router = useRouter();
+const newRoute = routes.filter(item => !item.hide)
 
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
@@ -32,7 +33,7 @@ const router = useRouter();
 // const routerChange = () =>{
 
 // }
-function handleSelect(key , keyPath){
+function handleSelect(key, keyPath) {
   // console.log(key , keyPath);
   router.push(key)
 }
@@ -42,14 +43,18 @@ function handleSelect(key , keyPath){
 
 <template>
   <el-menu mode="horizontal" @select="handleSelect">
-    <el-menu-item v-for="route in routes" :index="route.path" v-bind:key="route.name">{{route.name}}</el-menu-item>
+    <el-menu-item
+      v-for="route in newRoute"
+      :index="route.path"
+      v-bind:key="route.name"
+    >{{ route.name }}</el-menu-item>
   </el-menu>
   <!-- <router-link to="/">返回</router-link>
   <ul>
     <li v-for="route in routes" v-bind:key="route.name">
       <router-link :to="route.path">{{ route.name }}</router-link> 
     </li>
-  </ul> -->
+  </ul>-->
   <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
   <router-view />
   <!-- <HelloWorld msg="Hello Vue 3 + Vite" /> -->
