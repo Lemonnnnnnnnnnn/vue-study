@@ -12,6 +12,7 @@
 </style>
 
 <script >
+// 声明额外的选项
 export default {
     inheritAttrs :false, // 默认绑定在根节点上，如果要自定义，设为false
     created(){
@@ -19,3 +20,5 @@ export default {
     }
 }
 </script>
+
+<script setup></script>
