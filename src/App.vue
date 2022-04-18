@@ -1,10 +1,4 @@
 <script lang="ts" setup>
-import { routes } from './router'
-import { useRouter } from 'vue-router'
-
-const router = useRouter();
-const newRoute = routes.filter(item => !item.hide)
-
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 // import HelloWorld from './components/HelloWorld.vue'
@@ -33,16 +27,11 @@ const newRoute = routes.filter(item => !item.hide)
 // const routerChange = () =>{
 
 // }
-function handleSelect(key, keyPath) {
-  // console.log(key , keyPath);
-  router.push(key)
-}
-
 
 </script>
 
 <template>
-      <router-view />
+  <router-view />
 
   <!-- <router-link to="/">返回</router-link>
   <ul>

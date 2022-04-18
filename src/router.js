@@ -1,7 +1,8 @@
 import SlotDemo from './pages/SlotDemo.vue'
 import { createRouter, createWebHashHistory } from 'vue-router'
 
-export const routes = [
+// 将路由配置输出导出，以生成导航栏
+export const routesArray = [
     {
         path: '/',
         name: '首页',
@@ -78,7 +79,7 @@ export const routes = [
 
 const router = createRouter({
     history: createWebHashHistory(),
-    routes
+    routes : routesArray
 })
 
 export default router
