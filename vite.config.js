@@ -6,5 +6,8 @@ export default defineConfig({
   plugins: [vue()],
   server:{
     port : '9999'
+  },
+  resolve : {
+    extensions : ['.vue','.js']
   }
 })

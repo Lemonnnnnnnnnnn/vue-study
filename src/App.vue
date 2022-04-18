@@ -42,13 +42,8 @@ function handleSelect(key, keyPath) {
 </script>
 
 <template>
-  <el-menu mode="horizontal" @select="handleSelect">
-    <el-menu-item
-      v-for="route in newRoute"
-      :index="route.path"
-      v-bind:key="route.name"
-    >{{ route.name }}</el-menu-item>
-  </el-menu>
+      <router-view />
+
   <!-- <router-link to="/">返回</router-link>
   <ul>
     <li v-for="route in routes" v-bind:key="route.name">
@@ -56,7 +51,6 @@ function handleSelect(key, keyPath) {
     </li>
   </ul>-->
   <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
-  <router-view />
   <!-- <HelloWorld msg="Hello Vue 3 + Vite" /> -->
   <!-- <button @click="testExpose">父组件按钮</button>
   <SlotDemo ref="slotdemo" msg="hello" @aaa="testEmit">
